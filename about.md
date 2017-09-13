@@ -1,7 +1,7 @@
 ---
 title: About
-layout: default
 permalink: "/about/"
+layout: default
 ---
 
 # Loud Saturdaze is dedicated to perfecting the art of music discovery.
