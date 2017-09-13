@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="showcaseBox">
+    <!-- <img src="{{ site.baseurl }}/assets/memphis.png"/> -->
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/4pxY6Mt3bbQ?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <p><span class="fp-showcase">Featured Post</span>TAY-K - The Race</p>
+</div>
+
+<div id="subscribeForm" class="subscribeForm">
+  <p class="subscribeUpdate">Get Updates <span>- Join our mailing list</span></p>
+  <form id="inline-subscribe" action="https://formspree.io/brangman.tyler@gmail.com" method="POST">
+    <input class="subscribeInput" type="email" name="_replyto" required placeholder="Email"/>
+    <input class="subscribeBtn" type="submit" name="submitForm" value="Subscribe"/>
+  </form>
+  <p class="subTagline">No worries about spam. We hate it too.</p>
+</div>
+
+<div class="post-list">
+  {% for post in site.posts %}
+    <div class="post">
+      <div class="postDate">
+        <p>{{ post.date | date: "%A, %B %-d" }}</p>
+      </div>
+      <div class="postContent">
+          {{ post.content }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
