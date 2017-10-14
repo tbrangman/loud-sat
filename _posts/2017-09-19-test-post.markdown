@@ -1,6 +1,0 @@
----
-title: Test Post
-date: 2017-09-19 04:08:00 Z
----
-
-Hello there this is cool
