@@ -1,19 +1,15 @@
 ---
-title: About
-permalink: "/about/"
 layout: default
+title: Info
+permalink: /info/
 ---
 
-# Loud Saturdaze is dedicated to perfecting the art of music discovery.
+<div class="container">
+	<div class="about-us">
+		<p>Loud Saturdaze is an incubator for visually driven stories about pop culture and music. Pop culture and music can be complex and subjective. We use video, graphics, and data visualization to explore topics that, otherwise, might get lost in a 10,000-word story. Loud Saturdaze is an online publication specializing in interactive and visual stories on popular culture and music. We also like to make music mixes too.</p>
 
+		<br>
 
-Each day, we post 5 of our favorite links on topics ranging from new artists, songs, producers, or even cool music products.
-We believe that music discovery should be spontaneous and fun. We discover so you can enjoy.
-
-## Submission
-
-While we can't gurantee every submission will be posted, if you have a song, video, or something cool you want to show feel free to email us at loudsat@gmail.com.
-
-## Sign up for our newsletter
-
-Stay up to date with our favorite weekly picks.
+		<p></p>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+---
+title: The Annual Grammy Awards by the Numbers
+date: 2017-08-07 22:16:01
+layout: post
+category: Culture
+teaser: A look at the Annual Grammy Awards over the years.
+featured: true
+feature-image: <img src="/assets/images/postPlaceholder.jpg"/>
+---
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+	<style type="text/css">
+		.grammy-header{
+			font-family: 'Quicksand', sans-serif;
+			font-size: 65px;
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.grammy-teaser{
+			color: rgba(0, 0, 0, 0.5);
+			padding: 10px 0;
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.grammy-paragraph{
+			font-family: 'Vollkorn', serif;
+			width: 50%;
+			margin: 0 auto;
+			font-size: 18px;
+			padding: 10px 0;
+		}
+
+		p{
+
+		}
+
+
+
+	</style>
+</head>
+
+<div class="container">
+	<p class="grammy-header">The Annual Grammy Awards by the Numbers.</p>
+	<p class="grammy-teaser">{{ page.teaser }}</p>
+	<div class="grammy-paragraph">
+		Each year The Grammys brings together massive amounts of people for a night to celebrate music. Millions of minutes of music are released each year, yet there can only be one winner for each category. There are a total of 84 categories across 30 genres. While there are many categories for The Grammys, the general field is what most people find popular since it encompasses many fields. The general field includes: Album of the Year, Record of the Year, Song of the Year, and Best New Artist.
+	</div>
+
+	<svg width="960" height="500"></svg>
+	<script>
+
+	var svg = d3.select("svg"),
+	    margin = {top: 20, right: 20, bottom: 30, left: 40},
+	    width = +svg.attr("width") - margin.left - margin.right,
+	    height = +svg.attr("height") - margin.top - margin.bottom;
+
+	var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+	    y = d3.scaleLinear().rangeRound([height, 0]);
+
+	var g = svg.append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	d3.tsv("data.tsv", function(d) {
+	  d.frequency = +d.frequency;
+	  return d;
+	}, function(error, data) {
+	  if (error) throw error;
+
+	  x.domain(data.map(function(d) { return d.letter; }));
+	  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+
+	  g.append("g")
+	      .attr("class", "axis axis--x")
+	      .attr("transform", "translate(0," + height + ")")
+	      .call(d3.axisBottom(x));
+
+	  g.append("g")
+	      .attr("class", "axis axis--y")
+	      .call(d3.axisLeft(y).ticks(10, "%"))
+	    .append("text")
+	      .attr("transform", "rotate(-90)")
+	      .attr("y", 6)
+	      .attr("dy", "0.71em")
+	      .attr("text-anchor", "end")
+	      .text("Frequency");
+
+	  g.selectAll(".bar")
+	    .data(data)
+	    .enter().append("rect")
+	      .attr("class", "bar")
+	      .attr("x", function(d) { return x(d.letter); })
+	      .attr("y", function(d) { return y(d.frequency); })
+	      .attr("width", x.bandwidth())
+	      .attr("height", function(d) { return height - y(d.frequency); });
+	});
+
+</script>
+
+
+	<div class="grammy-paragraph">
+		Each year The Grammys brings together massive amounts of people for a night to celebrate music. Millions of minutes of music are released each year, yet there can only be one winner for each category. There are a total of 84 categories across 30 genres. While there are many categories for The Grammys, the general field is what most people find popular since it encompasses many fields. The general field includes: Album of the Year, Record of the Year, Song of the Year, and Best New Artist.
+	</div>
+</div>
