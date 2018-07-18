@@ -1,8 +1,9 @@
 ---
 title: The Grammys, Grammy, Grammy
-date: 2017-08-07 22:16:01
+date: 2017-08-07 22:16:01 Z
+categories:
+- Culture
 layout: post
-category: Culture
 teaser: This is a really cool teaser. It is filled with random stuff.
 feature-image: <img src="/assets/images/postPlaceholder.jpg"/>
 ---

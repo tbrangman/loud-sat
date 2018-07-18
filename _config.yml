@@ -9,8 +9,8 @@ collections:
     title: Uploads
     output: true
 email: your-email@domain.com
-description: 'Your favorite music blog''s, favorite music blog.
-excerpt_separator: <-break->
+description: 'Your favorite music blog''s, favorite music blog. excerpt_separator:
+  <-break->
 
 '
 baseurl: 

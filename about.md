@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Info
-permalink: /info/
+permalink: "/info/"
+layout: default
 ---
 
 <div class="container">
